@@ -16,13 +16,14 @@
         "strict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": false,
-        "baseUrl": ".",
+        "baseUrl": "./",
         "moduleResolution": "node",
         "inlineSourceMap": true,
         "paths": {
-            "src": ["./src"]
+            "src/*": ["src/*"]
         },
         "allowSyntheticDefaultImports": true
     },
+    "include": ["./src/**/*"],
     "exclude": ["node_modules", "dist"]
 }
