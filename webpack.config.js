@@ -5,7 +5,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
         alias: {
-            src: path.resolve(__dirname, './src'),
+            src: path.resolve('src'),
         },
     },
     devServer: {
@@ -13,9 +13,9 @@ module.exports = {
         compress: true,
         port: 3000,
     },
-    entry: path.resolve(__dirname, './src', 'index.tsx'),
+    entry: path.resolve('src', 'index.tsx'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve('dist'),
         filename: 'bundle.js',
     },
     module: {
@@ -44,7 +44,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: path.resolve('index.html'),
         }),
     ],
 };
